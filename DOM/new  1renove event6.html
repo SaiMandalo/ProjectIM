@@ -1,0 +1,16 @@
+<html>
+<body>
+<p id="tra">this is traditaniol method</p>
+<script>
+
+	var p=document.getElementById("tra");
+	fn=function(){this.style="background:red";};
+	
+	var fn=function(){
+	alert("hello world");
+	p.removeEventListener("click",fn);
+	};
+	p.addEventListener("click",fn);
+</script>
+</body>
+</html>

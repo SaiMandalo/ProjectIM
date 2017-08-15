@@ -1,0 +1,43 @@
+<html>
+<head>
+</head>
+<body ng-app="myApp">
+<h1>filters in angular js</h1>
+<hr>
+<div ng-controller="DController">
+select name:
+<input ng-model="searchObj.sname">
+<br><br>
+select course:
+<select ng-model="searchObj.course">
+<option>html</option>
+<option>css3</option>
+<option>angular.js</option>
+<option value="">all course</option>
+</select>
+<table  id="t1" border="2">
+<tr>
+ <th>Student Name</th>
+ <th>Student Course</th>
+</tr>
+<tr ng-repeat="item in Students | filter:searchObj">
+ <td>{{item.sname}}</td>
+ <td>{{item.course}}</td>
+</tr>
+</table>
+</div>
+
+<script src="angular.js">
+</script>
+<script>
+var obj=angular.module("myApp",[]);
+obj.controller("DController",function($scope)
+{
+$scope.searchObj={sname:"",course:""};
+$scope.Students=[{sname:"scatt",course:"html5"},
+				{sname:"amit",course:"css3"},
+				{sname:"rohit",course:"angular.js"}];
+});
+</script></body>
+</head>
+</html>

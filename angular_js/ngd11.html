@@ -1,0 +1,32 @@
+<html>
+<head>
+<style>
+#div1
+{
+color:blue;
+border:2px solid blue;
+padding:5px;
+width:35%;
+font-size:20px;
+background-color:lightYellow;
+}</style>
+</head>
+<body ng-app="myApp">
+<h1>filters in angular js</h1>
+<hr>
+<div id="div1" ng-controller="ProductControllreer">
+Product Name:{{PrdObj.pname | uppercase}}<br>
+Product Price:{{PrdObj.price | currency}}<br>
+PrdObj Brand:{{PrdObj.brand | lowercase}}
+</div>
+
+<script src="angular.js">
+</script>
+<script>
+var obj=angular.module("myApp",[]);
+obj.controller("ProductControllreer",function($scope)
+{
+$scope.PrdObj={brand:"SOnY",pname:"sony camera",price:398};
+});
+</script></body>
+</head>

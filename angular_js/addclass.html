@@ -1,0 +1,51 @@
+<html>
+<head>
+</head>
+<body ng-app="myApp">
+<h2>Dept Details</h2>
+<div ng-controller="demoController">
+Dept Name:<input ng-model="s1">
+<br>
+Location:<input ng-model="s2">
+<br>
+<input type="button" ng-click="fn_addDept()" value="add dept">
+<br><br>
+<table border="2" width="400">
+<tr>
+	<th>Dname</th>
+	<th>Location</th><th></th>
+</tr>
+<tr ng-repeat="item in depts">
+	<td>{{item.dname}}</td>
+	<td>{{item.loc}}</td>
+	<td><a href="#" ng-click="fn_removeDept(2);">Remove Dept</td>
+</tr>
+</table>
+</div>
+<script src="angular.js">
+</script>
+<script>
+var app=angular.module("myApp",[]);
+app.controller("demoController",function($scope)
+{
+$scope.s1="";
+$scope.s2="";
+$scope.depts=[
+{dname:"Accounts",loc:"Hyd"},
+{dname:"Sales",loc:"Puna"},
+{dname:"Marketing",loc:"Chennai"}];
+$scope.fn_addDept=function()
+{
+var deptObj=new Object();
+deptObj.dname=$scope.s1;
+deptObj.loc=$scope.s2;
+$scope.depts.push(deptObj);
+};
+$scope.fn_removeDept=function(n)
+	{
+$scope.depts.spice(n,1);
+};
+});
+</script>
+
+

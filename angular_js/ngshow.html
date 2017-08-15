@@ -1,0 +1,32 @@
+<html>
+<head>
+<style>
+</style>
+</head>
+<body ng-app="myApp">
+<h1>Special Direactives</h1>
+<hr>
+<div ng-controller="DemoController">
+<h3>usage of ng-disable</h3>
+<input type="checkbox" ng-model="x">
+ Are u agree terms and conditions ?
+ <br><br>
+ <input type="button" ng-disabled="!x" value="Register">
+ <input type="button" ng-disabled="false" value="Register">
+ <hr><hr>
+ <a href="" ng-click="y=!y">Show/Hide user details</a><br>
+ <a ng-show="y">this direactive contains user details</a>
+
+ <script src="angular.js">
+ </script>
+<script> 
+var obj=angular.module("myApp",[]);
+obj.controller("DemoController",function($scope)
+{
+$scope.x=false;
+$scope.y=false;
+$scope.z=false;
+});
+</script>
+</body>
+</html>

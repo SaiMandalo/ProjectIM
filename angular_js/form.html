@@ -1,0 +1,32 @@
+<html>
+<head>
+<style>
+</style>
+<script src="angular.js"></script>
+<script>
+var obj=angular.module("myApp",[]);
+obj.controller("DemoController",function($scope)
+	{
+	$scope.fname="Prabeen";
+	$scope.lname="Kumar";
+	});
+</script>
+</head>
+<body ng-app="myApp">
+<h1>Angularjs Validations</h1>
+<hr>
+<div ng-controller="DemoController">
+<form name="f1" novalidate>
+first name:<input type="text" name="t1" ng-model="fname" required>
+<span class="c1" ng-show="f1.t1.$error.required">
+First name is required</span>
+<br><br>
+last name:<input type="text" name="t2" ng-model="lname" ng-required="true">
+<span class="c1" ng-show="f1.t2.$error.required">
+last name is required</span>
+<br><br>
+<input type="button" value="submit" name="b1"><br><br>
+</form>
+</div>
+</body>
+</html>

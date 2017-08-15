@@ -1,0 +1,19 @@
+<html>
+<body>
+<p id="tra">this is traditaniol method</p>
+<script>
+var NewElement=document.createElement("div");
+NewElement.setAttribute("id","divid");
+NewElement.setAttribute("name","divname");
+NewElement.setAttribute("style","background-color:red;height=200px;width=200px;");
+document.body.appendChild(NewElement);
+NewElement1=document.createElement("h1");
+NewElement.appendChild(NewElement1);
+NewElement1.setAttribute("id","divh");
+//create new textnode
+var NewText=document.createTextNode("div data");
+//document.getElementById('divid').appendChild(NewText);
+NewElement1.appendChild(NewText);
+</script>
+</body>
+</html>

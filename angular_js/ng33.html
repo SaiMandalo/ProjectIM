@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>
+Services in angularjs</title>
+<script type="text/javascript" src="angular.min.js">
+</script>
+<script>
+var app = angular.module("myApp",[]);
+app.factory("TestService",function()
+{ 	var obj={};
+	obj.sum=function(x,y)
+	{
+		var z = x+y;
+		return z;
+	}
+	return obj;
+})
+app.controller("MathController",function($scope,TestService)
+{
+	$scope.x=10;
+	$scope.y=20;
+	$scope.result=0;
+	$scope.getSum=function(){
+		$scope.result=TestService.sum($scope.x,$scope.y);
+	}
+
+})
+
+</script>
+</head>
+<body ng-app="myApp">
+<h1>AJS services with math controller</h1>
+<hr>
+<div ng-controller="MathController">
+First Value:<input type="text" ng-model="x"><br>
+Second Value:<input type="text" ng-model="y"><br>
+<button ng-click="getSum()">Sum</button>
+<button ng-click="getMultiply()">Multiplu</button><br>
+Result:{{result}}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>custom filter in angualrjs</title>
+<script type="text/javascript" src="angular.min.js"></script>
+<script>
+	var app=angular.module("myApp",[]);
+	app.filter("Reverse",function()
+	{
+		var fn_test =function(input)
+		{
+			var ar = input.split('');
+			ar.reverse();
+			var output=ar.join('');
+			return output;
+
+			};
+	return fn_test;
+	});
+	app.filter("StartsWith",function()
+	{
+		var fn_test = function(input,option1)
+		{
+			var output=[];
+			for(var i=0; i<input.length;i++)
+			{
+				if(input[i].charAt(1)==option1)
+				{
+					output.push(input[i]);
+				}
+			}
+			return output;
+		};
+		return fn_test;
+	});
+	app.filter("TempEmps",function()
+	{
+		var fn_test=function(input){
+			var output=[];
+			for(i=0;i<input.length;i++)
+			{
+				if(input[i].type=="parttime")
+				{
+				output.push(input[i].ename)
+				}
+			}
+			return output;
+		};
+		return fn_test;
+	});
+	app.controller("DemoController",function($scope)
+	{
+		$scope.uname="Hello World";
+		$scope.courses=["Angularjs","asp","asp.net","jsp","php"];
+		$scope.emps=[{empno:1025,ename:"scott",type:"fulltime"},
+		{empno:1026,ename:"rajesh",type:"parttime"}];
+	});
+
+</script>
+</head>
+<body ng-app="myApp">
+<h1>custom filter</h1><hr>
+<div ng-controller="DemoController">
+username:{{uname | Reverse}}
+<br><br>
+<span>filtered courses</span>
+<ol>
+<li ng-repeat="item in courses | StartsWith:'s'">
+{{item}}
+</li>
+</ol>
+<div ng-repeat="emp in emps | TempEmps">
+{{emp}}
+<div>
+</div>
+</body>
+</html>
+

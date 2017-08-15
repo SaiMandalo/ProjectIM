@@ -1,0 +1,28 @@
+
+.header{
+width:800px;
+	text-align:center;
+	background-color:#BDBDBD;
+	padding-top:10px;
+	}
+.footer{
+	background-color:#BDBDBD;
+	text-align:cener;
+	width:800px;
+	padding:10px;
+	}
+.leftMenu{
+height:500px;
+width:150px;
+background-color:#D8D8D8;
+text-align:center;
+}
+.mainContent{
+height:500px;
+width:650px;
+background-color:#E6E6E6;
+}
+a{
+display:block;
+padding:5px;
+}

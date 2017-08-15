@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM Docment Object Model</title>
+</head>
+<body class="classname" >
+<!--<h1>My first heading</h1>
+	<p>My first paragraph</p>
+<div>
+<input type="text">
+</div> -->
+
+
+<!--<h1 class="c" id="heading">My third heading</h1>
+<h1 class="cls" id="heading">My first heading</h1>
+<h1 id="heading2">My second heading</h1>
+	<p class="cls">My first paragraph</p>
+	<div>
+<input type="text">
+</div> 
+<script>
+function click()
+{
+alert("hello");
+}
+h1=document.getElementById('heading');
+h1.onclick=click;
+
+//if we put click() it will select sutomatically;-->
+<!--<img id="img1"></img> 
+<span id="img">
+<img></img>
+	<img></img>
+	<img></img>
+</span>
+<script>
+//document.getElementById('img1').src='img2.jpg'
+//document.getElementById("img").children[0].src='img1.jpg'
+//document.getElementById("img").children[1].src='img2.jpg'
+//document.getElementById("img").children[2].src='img3.jpg'-->
+<!--<span id="image">
+<img id="im" src='img1.jpg'></img>
+</span>
+<input type="subit" onclick="image();" value= "remove image">
+<input type="subit" onclick="image1();" value="image">
+
+<script>
+//document.getElementById('image').innerHTML="<img src='img2.jpg'></img>"
+
+function image(){
+var i=document.getElementById('im');
+i.parentNode.removeChild(im);
+}
+function image1(){
+document.getElementById('image').innerHTML="<img src='img1.jpg'></img>"
+}-->
+<!--<input type="submit" onclick="click1()">
+<span id="ist">
+<h1 id="hello" style="background-color:red">hello</h1>
+<h1 id="hello" style="background-color:green">hello1</h1>
+<span id="target">
+</span>
+
+<script>
+function click1(){
+document.getElementById('target').append(document.getElementById('hello'));
+}
+-->
+<input type="submit" value="image" onclick="click2()">
+<span id="target2">
+</span>
+
+<script>
+function click1(){
+document.getElementById('target').append(document.getElementById('hello'));
+}
+function click2(){
+//var img=document.createElement('IMG');
+var img=document.createElement('H1');
+var p=document.createTextNode('hjh');
+img.appendChild(p);
+//img.src="img1.jpg";
+document.getElementById('target2').appendChild(img);
+}
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

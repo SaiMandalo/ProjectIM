@@ -1,0 +1,35 @@
+<html>
+<head>
+</head>
+<body ng-app="myApp">
+<h1>student details</h1>
+<hr>
+<div ng-controller="StudentController">
+
+<table border="2">
+<tr>
+	<th>s.no</th>
+	<th>s.name</th>
+	<th>course name</th>
+	</tr>
+<tr  ng-repeat="item in students">
+	<td>{{$index+1}}</td>
+	<td>{{item.sname}}</td>
+	<td>{{item.course}}</td>
+	</tr>
+	
+</table>
+</div>
+<script src="angular.js">
+</script>
+<script>
+var app= angular.module("myApp",[]);
+app.controller("StudentController",function($scope)
+{
+$scope.students=[
+		{sname:"scott",course:"HTML5"},
+		{sname:"smith",course:"css3"}];
+});
+</script>
+</body>
+</html>

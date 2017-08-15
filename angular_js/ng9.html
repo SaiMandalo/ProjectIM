@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body ng-app="myApp";>
+<div ng-controller="demoController">
+product id:{{pid}};<br>
+product name:{{pname}};</br>
+unit price:{{price}};</br>
+</div>
+
+<script src="angular.js">
+</script>
+<script>
+var obj=angular.module("myApp",[]);
+obj.controller("demoController",function($scope)
+{
+$scope.pid=123;
+$scope.pname="Hp printer";
+$scope.price=2344;
+});
+</script>
+</body>
+</html>

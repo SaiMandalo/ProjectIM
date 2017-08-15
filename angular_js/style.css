@@ -1,0 +1,23 @@
+.header{
+	width:800px;
+	text-align:center;
+	background-color:#BDBDBD;
+	}
+.footer{
+	background-color:#BDBDBD;
+	text-align:cener;
+	}
+.leftMenu{
+height:500px;
+widdth:150px;
+background-color:#D8D8D8;
+}
+mainContent{
+height:500px;
+width:650px;
+background-color:#E6E6E6;
+}
+a{
+diaplay:block;
+padding:5px;
+}

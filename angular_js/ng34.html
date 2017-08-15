@@ -1,0 +1,27 @@
+<html>
+<head>
+<style>
+.c1
+{
+	color:red;
+}
+</style>
+<script src="angular.min.js">
+</script>
+<script type="text/javascript">
+	var app=angular.module("myApp",[]);
+	app.controller("DemoController",function($scope)
+	{
+		$scope.fname="";
+		$scope.lname="";
+		$scope.pin="";
+		$scope.emaiid="";
+		$scope.city="";
+
+	});
+
+</script>
+</head>
+<body>
+<h1>Angularjs form validation</h1>
+<div ng-controller="DemoController">

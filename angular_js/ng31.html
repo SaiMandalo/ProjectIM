@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>
+ng dependency of module
+</title>
+<script src="angular.min.js">
+</script>
+<script type="text/javascript">
+	var app1=angular.module("myApp1",[]);
+	app1.controller("PersonControleer",function($scope)
+	{
+		$scope.name="scott";
+		$scope.age="30";
+	});
+	var app2=angular.module("myApp2",["myApp1"])
+	app2.controller("EmpController",function($scope)
+	{	$scope.empno="1234";
+		$scope.job="mangager";
+		$scope.salary=25,000;
+	});
+</script>
+</head>
+<body ng-app="myApp2">
+<h1>AngularJs module depend on another module</h1>
+<div ng-controller="PersonControleer">
+ 	Employee Name:{{name}}<br>
+ 	Employee Age:{{age}}<br>
+ 	</div>
+ 	<div ng-controller="EmpController">
+ 	Employeer Number:{{empno}}<br>
+ 	Employee Age:{{age}}<br>
+ 	Employeer Job:{{job}}<br>
+ 	Employeer Salary:{{salary}}
+ 	
+ </div>
+
+</body>
+</html>

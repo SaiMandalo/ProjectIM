@@ -1,0 +1,36 @@
+<html>
+<body>
+<p id="tra">this is traditaniol method</p>
+<table id="tab">
+<tr>
+<td><img src="img1.jpg"></img></td>
+<td><img src="img1.jpg"></img></td>
+<td><img src="img1.jpg"></img></td>
+</tr>
+<tr>
+<td><img src="img1.jpg"></img></td>
+<td><img src="img1.jpg"></img></td>
+<td><img src="img1.jpg"></img></td>
+</tr>
+<tr>
+<td><img src="img1.jpg"></img></td>
+<td><img src="img1.jpg"></img></td>
+<td><img src="img1.jpg"></img></td>
+</tr>
+</table>
+<script>
+var tb=function(ta){
+	if(ta.target.src){
+	
+	ta.target.src="img2.jpg";
+	};
+	};
+	
+	document.getElementById("tab").addEventListener("mouseover",tb);
+	//fn=function(){this.style="background:red";};
+	
+	
+	
+</script>
+</body>
+</html>

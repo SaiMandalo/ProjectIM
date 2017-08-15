@@ -1,0 +1,26 @@
+
+<html>
+<body>
+<p id="pid"class="pclass" style="background-color:red" onClick="functionname();" name="pname">this is traditaniol method</p>
+<script>
+<!-- document.getElementById("tra").onclick=function(){this.style="background:red";} -->
+	var paragraph=document.getElementById("pid");
+	
+	//document.write(paragraph.getAttribute('id'));
+	//document.write('<br>');
+	document.write(paragraph.getAttribute('class'));
+	//paragraph.setAttribute("id","newid");
+	//paragraph.setAttribute("title","newtital");
+	//document.write(paragraph.getAttribute('title'));
+	//document.write(paragraph.getAttribute('id'));
+	//document.write('<br>');
+	paragraph.removeAttribute('class');
+	function functionname(){
+	paragraph.removeAttribute('style');
+	}
+	document.write('<br>');
+	document.write(paragraph.getAttribute('class'));
+	document.write(paragraph.getAttribute('style'));
+</script>
+</body>
+</html>

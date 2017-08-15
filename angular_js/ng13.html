@@ -1,0 +1,43 @@
+<html>
+<head>
+<style>
+#t1
+{
+color:blue;
+border:2px solid blue;
+padding:5px;
+font-size:20px;
+background-color:lightyellow;
+}</style>
+</head>
+<body ng-app="myApp">
+<h1>filters in angular js</h1>
+<hr>
+<div ng-controller="SControllreer">
+<table  id="t1" border="2"><tr>
+<th ><a href="" ng-click="x='sname';y=!y">Student Name</a></th>
+<th><a href="#" ng-click="x='course';y=!y">Student Course</a></th>
+</tr>
+<tr ng-repeat="item in Students | orderBy:x:true">
+<td>{{item.sname}}</td>
+<td>{{item.course}}</td>
+</tr>
+</table>
+</div>
+
+<script src="angular.js">
+</script>
+<script>
+var obj=angular.module("myApp",[]);
+obj.controller("SControllreer",function($scope)
+{
+$scope.x="";
+$scope.y=true;
+$scope.Students=[{sname:"scatt",course:"html5"},
+				{sname:"amit",course:"angularjs"},
+				{sname:"basu",course:"idg"},
+			{sname:"rohit",course:"css"}];
+});
+</script></body>
+</head>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<head>
+<style>
+.c1
+{
+height:50px;
+width:65px;
+border:2px solid blue;
+margin:5px;
+padding:3px;
+border-radius:10px;
+}
+</style>
+</head>
+<body ng-app="myApp">
+<h1>Product Details Page</h1>
+<hr>
+<div ng-controller="ProductController">
+<img class="c1" ng-repeat="items in ar" 
+			ng-click="f1(items)"
+			src="birds/{{items}}">
+		</div>
+<img ng-src="birds/img1.jpg" width="300" height="200" border="2">
+
+<script src="angular.js">
+</script>
+<script>
+var app=angular.module("myApp",[]);
+app.controller("ProductController",function($scope)
+{
+$scope.ar=["img1.jpg","img2.jpg","img3.jpg","img4.jpg"];
+$scope.str="img1.jpg";
+$scope.f1=function(x)
+	{
+	$scope.str=x;
+	};
+	});
+	</script>
+	</body>
+	</html>
+			
